@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditActivity">
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_baseline_photo_24" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="4dp"
+        android:textSize="15sp"
+        android:id="@+id/textHint"
+        android:text="Tap to Add an Image"
+        android:textStyle="bold"
+        android:layout_below="@+id/profile_image" />
+
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/txtedit1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/textHint"
+    android:layout_margin="10dp">
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameEditText1"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_below="@+id/textHint"
+        android:layout_centerInParent="true"
+        android:hint="Full Name"
+        android:drawableStart="@drawable/ic_baseline_person_24"
+        android:drawablePadding="10dp"/>
+</com.google.android.material.textfield.TextInputLayout>
+
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/txtedit2"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/txtedit1"
+    android:layout_margin="10dp"
+    android:layout_marginEnd="10dp">
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/phoneEditText"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_below="@+id/nameEditText1"
+        android:inputType="number"
+        android:hint="Phone Number"
+        android:maxLength="10"
+        android:drawableStart="@drawable/ic_baseline_phone_24"
+        android:drawablePadding="10dp"/>
+</com.google.android.material.textfield.TextInputLayout>
+
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtedit2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="-40dp"
+        android:layout_marginRight="50dp"
+        android:layout_toRightOf="@+id/txtedit2"
+        android:contextClickable="true"
+        android:textAlignment="textStart"/>
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/txtedit3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/txtedit2"
+    android:layout_margin="10dp">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailEditText"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_below="@+id/txtedit2"
+        android:layout_centerInParent="true"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:drawableStart="@drawable/ic_baseline_email_24"
+        android:drawablePadding="10dp"/>
+</com.google.android.material.textfield.TextInputLayout>
+</RelativeLayout>
+</ScrollView>
